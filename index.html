@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Jhon Dyle Turns 7</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --blue: #cfe1f5;
+  --dark-blue: #1b2d4f;
+  --accent: #3f6fb6;
+  --pink-border: #1e6289;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #6aa9a3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.invite-wrapper {
+  border: 8px solid var(--pink-border);
+  padding: 20px;
+  border-radius: 18px;
+  background: #73a9c8;
+}
+
+.invite-card {
+  background: var(--blue);
+  border-radius: 18px;
+  padding: 30px;
+  width: 100%;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  position: relative;
+}
+
+/* Photo */
+.photo-frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo-circle {
+  border: 12px solid var(--accent);
+  border-radius: 50%;
+  width: 320px;
+  height: 320px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.photo-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Right content */
+.content {
+  text-align: center;
+  color: var(--dark-blue);
+}
+
+.name {
+  font-size: 48px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  font-size: 18px;
+  margin-top: -5px;
+}
+
+.date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 25px 0;
+  font-size: 22px;
+}
+
+.date span {
+  font-weight: 600;
+}
+
+.date .day {
+  font-size: 56px;
+  font-weight: 800;
+}
+
+.time {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.location {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/* Cake */
+.cake {
+  margin-top: 20px;
+}
+
+.cake img {
+  width: 160px;
+}
+
+/* Dino decorations */
+.dino {
+  position: absolute;
+  width: 90px;
+}
+
+.dino.top-left { top: -20px; left: -20px; }
+.dino.top-right { top: -20px; right: -20px; }
+.dino.bottom-left { bottom: -20px; left: -20px; }
+.dino.bottom-right { bottom: -20px; right: -20px; }
+
+/* Mobile */
+@media (max-width: 768px) {
+  .invite-card {
+    grid-template-columns: 1fr;
+  }
+  .photo-circle {
+    width: 260px;
+    height: 260px;
+  }
+}
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .invite-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .photo-circle {
+    width: 220px;
+    height: 220px;
+  }
+
+  .name {
+    font-size: 36px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .date {
+    gap: 10px;
+    font-size: 18px;
+  }
+
+  .date .day {
+    font-size: 42px;
+  }
+
+  .time {
+    font-size: 18px;
+  }
+
+  .location {
+    font-size: 14px;
+  }
+
+  .cake img {
+    width: 120px;
+  }
+
+  /* dinos smaller */
+  .dino {
+    width: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .invite-wrapper {
+    padding: 10px;
+  }
+
+  .photo-circle {
+    width: 180px;
+    height: 180px;
+  }
+
+  .name {
+    font-size: 30px;
+  }
+
+  .date .day {
+    font-size: 36px;
+  }
+
+  .dino {
+    width: 45px;
+  }
+
+  /* move dinos inward para di matakpan */
+  .dino.top-left { top: 0; left: 0; }
+  .dino.top-right { top: 0; right: 0; }
+  .dino.bottom-left { bottom: 0; left: 0; }
+  .dino.bottom-right { bottom: 0; right: 0; }
+}
+.photo-circle {
+  animation:
+    slideIn 0.8s ease-out forwards,
+    floatBounce 4s ease-in-out infinite;
+}
+
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes floatBounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%) scale(0.5);
+    opacity: 0;
+  }
+  60% {
+    transform: translateX(20%) scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+
+</style>
+</head>
+
+<body>
+  <div class="invite-wrapper">
+    <div class="invite-card">
+
+      <!-- Decorative dinos -->
+
+      <!-- Photo -->
+      <div class="photo-frame">
+        <div class="photo-circle">
+          <img src="johndyle.jpg" alt="Jhon Dyle">
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="content">
+        <div class="name">JHON VIXIN DYLE</div>
+        <div class="subtitle">is turning 7</div>
+
+        <div class="date">
+          <span>DEC</span>
+          <span class="day">31</span>
+          <span>2025</span>
+        </div>
+
+        <div class="time">AT 3PM</div>
+
+        <div class="location">
+          P4 Kabungahan Labo<br>
+          Camarines Norte
+        </div>
+
+        <div class="cake">
+        </div>
+        
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
